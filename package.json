@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.1.17",
+    "gatsby": "^2.1.19",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-google-analytics": "^2.0.14",
     "gatsby-plugin-manifest": "^2.0.19",
@@ -17,6 +17,7 @@
     "gatsby-plugin-styled-components": "^3.0.6",
     "gatsby-source-filesystem": "^2.0.22",
     "gatsby-transformer-sharp": "^2.1.14",
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
@@ -39,7 +40,8 @@
     "build": "gatsby build",
     "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
     "lint:fix": "eslint . --ext .js,.jsx --fix --ignore-path .gitignore",
-    "lint:ci": "yarn lint --format junit -o results/eslint/result.xml"
+    "lint:ci": "yarn lint --format junit -o results/eslint/result.xml",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
